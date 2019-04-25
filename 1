@@ -1,0 +1,24 @@
+include <Arduino.h>
+#include <Wire.h>
+#include <ArdusatSDK.h>
+
+ArdusatSerial serialConnection(SERIAL_MODE_HARDWARE_AND_SOFTWARE, 8, 9);
+
+Temperature temp;
+
+void setup(void)
+{
+  serialConnection.begin(9600);
+
+  temp.begin();
+
+  serialConnection.println("");
+}
+
+void loop(void)
+{
+  
+  serialConnection.println(temp.readToJSON("ambientTemp"));
+
+  delay(100);
+}

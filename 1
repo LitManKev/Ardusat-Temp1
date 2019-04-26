@@ -1,4 +1,4 @@
-include <Arduino.h>
+#include <Arduino.h>
 #include <Wire.h>
 #include <ArdusatSDK.h>
 
@@ -6,13 +6,18 @@ ArdusatSerial serialConnection(SERIAL_MODE_HARDWARE_AND_SOFTWARE, 8, 9);
 
 Temperature temp;
 
+
 void setup(void)
 {
   serialConnection.begin(9600);
 
   temp.begin();
-
-  serialConnection.println("");
+if (Temperature temp== 20 , 21 , 22);
+  printf
+else if (Temperature temp=<19);
+  printf
+else
+  printf
 }
 
 void loop(void)
